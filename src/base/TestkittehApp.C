@@ -28,6 +28,7 @@ TestkittehApp::~TestkittehApp()
 {
 }
 
+extern "C" void TestkittehApp__registerApps() { TestkittehApp::registerApps(); }
 void
 TestkittehApp::registerApps()
 {
