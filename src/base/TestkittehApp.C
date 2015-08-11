@@ -10,10 +10,9 @@ InputParameters validParams<TestkittehApp>()
   return params;
 }
 
-TestkittehApp::TestkittehApp(const std::string & name, InputParameters parameters) :
-    MooseApp(name, parameters)
+TestkittehApp::TestkittehApp(InputParameters parameters) :
+    MooseApp(parameters)
 {
-  srand(processor_id());
 
   Moose::registerObjects(_factory);
   ModulesApp::registerObjects(_factory);
